@@ -8,8 +8,9 @@ class ParticleSystem {
     if (frameCount%3 ==0) {
     this.particles.push(new Particle(this.origin));
   }
+}
   
-  add(aForce){
+  add(aForce) {
     for (let p of this.particles) {
       p.applyForce(aForce);
     }

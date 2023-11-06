@@ -6,7 +6,7 @@ class Particle {
   this.position = position.copy();
   this.lifespan = 255;
   this.w = random(1, 15);
-  this.c = color(random(0,255);)
+  this.c = color(random(0,255), random(0, 255), random(0, 255));
   }
   
   run() {

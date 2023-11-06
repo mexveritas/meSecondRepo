@@ -15,11 +15,17 @@ function draw() {
     s.addParticle();
     s.run();
   }
-  
-  if (mouseIsPressed) {
-  let wind = createVector(0.2, 0);
-  system.add(wind);
-  }
-  
-  system.add(gravity);
 }
+
+function mouseClicked() {
+  let mpos = createVector(mouseX, mouseY);
+  let s = new ParticleSystem(mpos);
+  systems.push(s);
+}
+
+// if (mouseIsPressed) {
+//   let wind = createVector(0.2, 0);
+//   system.add(wind);
+//   }
+  
+//   system.add(gravity);
