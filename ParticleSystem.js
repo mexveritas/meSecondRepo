@@ -5,7 +5,7 @@ class ParticleSystem {
   }
 
   addParticle() {
-    if (frameCount%3 ==0) {
+    if (frameCount%7 ==0) {
     this.particles.push(new Particle(this.origin));
   }
 }
