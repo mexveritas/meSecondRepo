@@ -1,4 +1,4 @@
-let system;
+let systems = [];
 let gravity;
 
 function setup() {
@@ -10,8 +10,11 @@ function setup() {
 
 function draw() {
   background(20);
-  system.addParticle();
-  system.run(); //run for all particle, check dead
+
+  for (let s of systems) {
+    s.addParticle();
+    s.run();
+  }
   
   if (mouseIsPressed) {
   let wind = createVector(0.2, 0);
