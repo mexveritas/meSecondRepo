@@ -1,3 +1,7 @@
+let blinks = [50, 150, 255];
+let blink = blinks[Math.floor(Math.random() * blinks.length)];
+
+
 class Particle {
   
   constructor(position) {
@@ -6,7 +10,7 @@ class Particle {
   this.position = position.copy();
   this.lifespan = 255;
   this.w = random(1, 15);
-  this.c = color(random(0,255), random(0, 255), random(0, 255));
+  this.c = color(0, 0, random(0, 255), blink);
   }
   
   run() {
@@ -28,7 +32,7 @@ class Particle {
   
   display() {
   stroke(200, this.lifespan);
-  strokeWeight(0);
+  strokeWeight(1);
   fill(this.c, this.lifespan);
   ellipse(this.position.x, this.position.y, this.w, this.w);
   }
