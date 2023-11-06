@@ -5,7 +5,7 @@ function setup() {
   createCanvas(800, 200);
   system = new ParticleSystem(createVector(50, 190));
   
-  gravity = createVector(0, 0.05);
+  gravity = createVector(0, 0.001);
 }
 
 function draw() {
